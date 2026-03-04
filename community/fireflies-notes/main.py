@@ -1,6 +1,5 @@
 import asyncio
 import json
-import os
 from datetime import datetime
 
 import requests
@@ -202,13 +201,19 @@ class FirefliesNotesCapability(MatchingCapability):
 
     @classmethod
     def register_capability(cls) -> "MatchingCapability":
-        with open(
-            os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
-        ) as file:
-            data = json.load(file)
         return cls(
-            unique_name=data["unique_name"],
-            matching_hotwords=data["matching_hotwords"],
+            unique_name="fireflies_notes",
+            matching_hotwords=[
+                "fireflies", "meeting notes", "meeting summary",
+                "action items", "what happened in my meeting",
+                "summarize my meeting", "meeting recap",
+                "who talked the most", "speaker analytics",
+                "meeting sentiment", "ask fred",
+                "send fireflies", "add fireflies to meeting",
+                "find meeting", "search meetings",
+                "my meetings", "recent meetings",
+                "last meeting", "meeting transcript",
+            ],
         )
 
     def call(self, worker: AgentWorker):
