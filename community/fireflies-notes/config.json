@@ -1,0 +1,14 @@
+{
+  "unique_name": "fireflies_notes",
+  "matching_hotwords": [
+    "fireflies", "meeting notes", "meeting summary",
+    "action items", "what happened in my meeting",
+    "summarize my meeting", "meeting recap",
+    "who talked the most", "speaker analytics",
+    "meeting sentiment", "ask fred",
+    "send fireflies", "add fireflies to meeting",
+    "find meeting", "search meetings",
+    "my meetings", "recent meetings",
+    "last meeting", "meeting transcript"
+  ]
+}
